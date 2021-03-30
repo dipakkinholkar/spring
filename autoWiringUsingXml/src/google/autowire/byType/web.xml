@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+      
+      
+		<bean class="google.autowire.byType.Student" name="studjkhkhent">
+		
+		<property name="sid" value="1010"></property>
+		<property name="sname" value="dipak"></property>
+		<property name="scity" value="pbn"></property>
+		
+		</bean>      
+      
+      
+      
+      <bean class="google.autowire.byType.College" name="college" autowire="byType">
+      
+      <property name="cname" value="cocsit"></property>
+      <property name="ccity" value="latur"></property>
+     
+ 	
+      </bean>
+      
+      
+      
+      
+      
+      
+      
+      
+      </beans>
