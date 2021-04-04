@@ -7,9 +7,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title><h1>${message}</h1></title>
+<title>Failed</title>
 </head>
 <body>
+<h1>${message}</h1>
 <jsp:include page="/index.jsp"></jsp:include>  
 </body>
 </html>
