@@ -11,7 +11,6 @@ public class CreateParagraph {
 	{
 		Paragraph par=new Paragraph(paragraph);
 		
-		
 		 boolean flag=doc.add(par);
 		
 		return flag;
