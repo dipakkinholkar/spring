@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+
 <body>
     <!-- Navbar Section Starts Here -->
     <section class="navbar">
@@ -34,7 +35,7 @@
                         <a href="foods.html">Foods</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -44,11 +45,18 @@
     </section>
     <!-- Navbar Section Ends Here -->
 
+
+
+
+
+
+
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search">
         <div class="container">
             
             <h2 class="text-center text-white">Fill this form to confirm your order.</h2>
+
 
             <form action="order"  method="post" class="order">
             
@@ -66,7 +74,7 @@
 
                         <div class="order-label">Quantity</div>
                         
-                        <input type="number" name="proQuantity" class="input-responsive" value="1" required>
+                        <input type="text" name="proQuantity" class="input-responsive" value="1" required>
                         
                     </div>
 

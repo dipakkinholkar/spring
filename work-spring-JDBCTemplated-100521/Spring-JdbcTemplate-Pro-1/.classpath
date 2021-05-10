@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/Dipak Kinholkar/Downloads/spring-dao-2.0.6.jar/spring-dao-2.0.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Dipak Kinholkar/Downloads/mysql-connector-java-8.0.21.jar"/>
+	<classpathentry kind="lib" path="C:/file/spring-aop-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/file/spring-beans-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/file/spring-context-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/file/spring-core-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/file/spring-expression-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/file/spring-jcl-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/file/spring-jdbc-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/file/spring-orm-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/file/spring-tx-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

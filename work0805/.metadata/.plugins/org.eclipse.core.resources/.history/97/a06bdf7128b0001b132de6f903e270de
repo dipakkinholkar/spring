@@ -1,0 +1,40 @@
+package com.dipak.dao;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.dipak.beans.UserLogin;
+import com.dipak.connection.DBConnection;
+import com.dipak.util.PasswordUtil;
+
+public class UserLoginDao {
+	
+	public static boolean checkUser(UserLogin user) throws ClassNotFoundException, IOException, SQLException
+	{
+		
+		
+		Connection con=DBConnection.getConnection();
+		
+		PasswordUtil pass=new PasswordUtil();
+		
+		String query="SELECT key , salt FROM  userregister WHERE username="+user.getUsername()+"";
+		
+		PreparedStatement ps=con.prepareStatement(query);
+		
+		ps.execute();
+		
+		
+		
+		pass.verifyUserPasswor(user.getPassword(),key,salt)
+		
+		
+		
+		
+		return false;
+		
+	}
+	
+
+}

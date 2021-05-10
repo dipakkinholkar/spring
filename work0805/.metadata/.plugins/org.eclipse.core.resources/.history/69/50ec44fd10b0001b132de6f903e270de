@@ -1,0 +1,26 @@
+package com.dipak.connection;
+
+import java.io.FileInputStream;
+import java.sql.Connection;
+import java.util.Properties;
+
+public class DBConnection {
+	
+	
+	private Connection getConnection()
+	{
+		FileInputStream fis=new FileInputStream("property.properties");
+		
+		Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+		
+		String url="jdbc:mysql://"+l+"/" + DB;
+		
+		Properties property=new Properties();
+		property.
+		
+		
+	}
+	
+	
+
+}

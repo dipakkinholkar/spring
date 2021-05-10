@@ -1,0 +1,21 @@
+package com.dipak.connection;
+
+import java.sql.Connection;
+import java.util.Properties;
+
+public class DBConnection {
+	
+	
+	private Connection getConnection()
+	{
+		String url="jdbc:mysql://"+localhost+"/" + DB;
+		
+		Properties property=new Properties();
+		property.
+		
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,26 @@
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import com.dipak.connection.DBConnection;
+
+public class UserRegistrationDao {
+	
+	
+	public static boolean saveUser()
+	{
+		Connection  con=DBConnection.getConnection();
+		
+		
+		PreparedStatement st = con.prepareStatement("insert into userregister values(?,?,?,?,?)");
+  
+		st.setString(1, accType);
+		st.setString(2,userEmail);
+		st.setString(3, username);
+		st.setString(4, password);
+		st.setString(5, gender);
+		
+
+	}
+	
+
+}

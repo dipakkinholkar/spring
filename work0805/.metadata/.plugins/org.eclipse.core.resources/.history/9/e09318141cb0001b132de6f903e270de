@@ -1,0 +1,38 @@
+package com.dipak.connection;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Properties;
+
+public class DBConnection {
+	
+	
+	public static Connection getConnection() throws IOException, ClassNotFoundException, SQLException
+	{
+		String path="\\RegistrationApp\\property.properties";
+		FileInputStream fis=new FileInputStream(path);
+		
+		Properties property=new Properties();
+		
+		property.load(fis);
+		
+		String classname=(String) property.get("classname");
+		String url=(String) property.get("url");
+		String username=(String) property.get("username");
+		String password=(String) property.get("password");
+		
+		Class.forName(classname);
+		
+		Connection con=DriverManager.getConnection(url , username , password);
+		
+		return con;
+		
+	}
+	
+	
+
+}

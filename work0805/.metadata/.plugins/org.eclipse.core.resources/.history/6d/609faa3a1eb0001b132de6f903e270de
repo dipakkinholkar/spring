@@ -1,0 +1,86 @@
+package com.dipak.service;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.dipak.beans.User;
+import com.dipak.connection.DBConnection;
+import com.dipak.dao.UserRegistrationDao;
+
+/**
+ * Servlet implementation class UserRegistrationServlet
+ */
+@WebServlet("/uregister")
+public class UserRegistrationServlet extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+	
+	static PrintWriter pw;
+	
+    /**
+     * Default constructor. 
+     */
+    public UserRegistrationServlet() {
+        // TODO Auto-generated constructor stub
+    }
+
+	protected  void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	
+		User user=new User();
+
+		UserRegistrationDao register=new UserRegistrationDao ();
+		
+		pw=res.getWriter();
+		
+		res.setContentType("text/html");
+		
+		String accType=req.getParameter("account");
+		String userEmail=req.getParameter("useremail");
+		String username=req.getParameter("username");
+		String password=req.getParameter("password");
+		String gender=req.getParameter("gender");
+		
+		user.setAccType(accType);
+		user.setUserEmail(userEmail);
+		user.setUsername(username);
+		user.setPassword(password);
+		user.setGender(gender);
+		
+		try {
+			
+			boolean check=UserRegistrationDao.saveUser(user);
+			
+			if(check==true)
+			{
+			System.out.println("registered");
+			}
+			else
+			{
+            System.out.println("not registered");
+			}
+			
+			
+		} catch (ClassNotFoundException | SQLException | IOException e) {
+			
+			e.printStackTrace();
+		}
+	
+		
+		
+		
+		
+	
+	
+	
+	}
+
+}

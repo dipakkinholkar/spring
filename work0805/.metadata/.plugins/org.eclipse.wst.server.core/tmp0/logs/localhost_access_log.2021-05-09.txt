@@ -1,0 +1,16 @@
+127.0.0.1 - - [09/May/2021:06:50:21 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [09/May/2021:06:50:27 +0530] "GET /RegistrationApp/ HTTP/1.1" 200 1751
+0:0:0:0:0:0:0:1 - - [09/May/2021:06:50:27 +0530] "GET /RegistrationApp/style.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [09/May/2021:06:50:32 +0530] "GET /RegistrationApp/userlogin.jsp HTTP/1.1" 200 218
+0:0:0:0:0:0:0:1 - - [09/May/2021:06:50:47 +0530] "POST /RegistrationApp/userlogin HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2021:08:09:13 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [09/May/2021:08:09:15 +0530] "GET /RegistrationApp/ HTTP/1.1" 200 1751
+0:0:0:0:0:0:0:1 - - [09/May/2021:08:09:15 +0530] "GET /RegistrationApp/style.css HTTP/1.1" 200 3800
+0:0:0:0:0:0:0:1 - - [09/May/2021:08:09:36 +0530] "POST /RegistrationApp/UserRegistrationServlet HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2021:08:18:40 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [09/May/2021:08:18:42 +0530] "GET /RegistrationApp/ HTTP/1.1" 200 1751
+0:0:0:0:0:0:0:1 - - [09/May/2021:08:19:10 +0530] "POST /RegistrationApp/UserRegistrationServlet HTTP/1.1" 200 -
+127.0.0.1 - - [09/May/2021:08:35:31 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [09/May/2021:08:35:32 +0530] "GET /RegistrationApp/ HTTP/1.1" 200 1751
+0:0:0:0:0:0:0:1 - - [09/May/2021:08:35:35 +0530] "GET /RegistrationApp/userlogin.jsp HTTP/1.1" 200 218
+0:0:0:0:0:0:0:1 - - [09/May/2021:08:35:48 +0530] "POST /RegistrationApp/userlogin HTTP/1.1" 200 -

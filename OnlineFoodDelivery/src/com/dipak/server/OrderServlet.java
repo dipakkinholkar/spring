@@ -24,6 +24,7 @@ public class OrderServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	static PrintWriter pw=null;
+	static Connection con;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -41,19 +42,18 @@ public class OrderServlet extends HttpServlet {
 				 
 				 int custId=Integer.parseInt(request.getParameter("custId"));
 				 String custName=request.getParameter("custName");
-				 Long custMobile=Long.parseLong(request.getParameter("custName"));
+				 int custMobile=Integer.parseInt(request.getParameter("custName"));
 				 String custEmail=request.getParameter("custEmail");
 				 String custAddress=request.getParameter("custAddress");
-				 Long proQuantity=Long.parseLong(request.getParameter("custQuanity"));
+				 int proQuantity=Integer.parseInt(request.getParameter("custQuanity"));
 				 String proName=request.getParameter("proName");
-				 Long proPrice=Long.parseLong(request.getParameter("proPrice"));
+				 int proPrice=Integer.parseInt(request.getParameter("proPrice"));
 				
 				 
 				 
 				  pw=response.getWriter();
 				 
-					Connection con=DBConnection.getConnection();
-				
+				  con=DBConnection.getConnection();
 					
 					response.setContentType("text/html");
 					
@@ -61,37 +61,46 @@ public class OrderServlet extends HttpServlet {
 							
 					
 				
-					PreparedStatement st = con
-.prepareStatement("insert into orderlist values(?,?,?,?,?,?,?,?)");
+					PreparedStatement st = con.prepareStatement("insert into orderlist values(?,?,?,?,?,?,?,?)");
 			  
-			            // For the first parameter,
-			            // get the data using request object
-			            // sets the data to st pointer
-			            st.setInt(1, Integer.valueOf(request.getParameter("custId")));
-			  
-			            // Same for second parameter
-			            st.setString(2, request.getParameter("custName"));
-			            
-			            
-			            st.setLong(3, Long.valueOf(request.getParameter("custMobile")));
-			            st.setString(4, request.getParameter("custEmail"));
-			            st.setString(5, request.getParameter("custAddress"));
-			            st.setInt(6, Integer.valueOf(request.getParameter("proQuantity")));
-			            st.setString(7, request.getParameter("proName"));
-			            st.setInt(8, Integer.valueOf(request.getParameter("proPrice")));
-						  
-			            
-			            
+					st.setInt(1, custId);
+					st.setString(2,custName);
+					st.setLong(3, custMobile);
+					st.setString(4, custEmail);
+					st.setString(5, custAddress);
+					st.setLong(6, proQuantity);
+					st.setString(7, proName);
+					st.setLong(8, proPrice);
+					
+					
+					
+					
+					
+//			            // For the first parameter,
+//			            // get the data using request object
+//			            // sets the data to st pointer
+//			            st.setInt(1, Integer.valueOf(request.getParameter("custId")));
+//			  
+//			            // Same for second parameter
+//			            st.setString(2, request.getParameter("custName"));
+//			            
+//			            
+//			            st.setLong(3, Long.valueOf(request.getParameter("custMobile")));
+//			            st.setString(4, request.getParameter("custEmail"));
+//			            st.setString(5, request.getParameter("custAddress"));
+//			            st.setInt(6, Integer.valueOf(request.getParameter("proQuantity")));
+//			            st.setString(7, request.getParameter("proName"));
+//			            st.setInt(8, Integer.valueOf(request.getParameter("proPrice")));
+//						  
+//			            
+//			            
 			            
 			            // Execute the insert command using executeUpdate()
 			            // to make changes in database
 			            st.executeUpdate();
 			  
 			            // Close all the connections
-			            st.close();
-			            con.close();
-			  
-					
+			           
 					
 					
 					

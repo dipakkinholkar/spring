@@ -1,0 +1,16 @@
+package com.dipak.connection;
+
+import java.sql.Connection;
+import java.util.Properties;
+
+public class DBConnection {
+	
+	private Connection getConnection()
+	{
+		Properties property=new Properties();
+		
+	}
+	
+	
+
+}

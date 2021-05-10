@@ -1,0 +1,75 @@
+package com.dipak.service;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.dipak.beans.User;
+import com.dipak.beans.UserLogin;
+import com.dipak.dao.UserLoginDao;
+import com.dipak.dao.UserRegistrationDao;
+
+@WebServlet("/login")
+public class UserLoginServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+	PrintWriter pw;
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public UserLoginServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	
+    	UserLogin login=new UserLogin();
+    	
+    	UserLoginDao logindao =new UserLoginDao();
+		
+		pw=res.getWriter();
+		
+		res.setContentType("text/html");
+		
+		String username=req.getParameter("username");
+		String password=req.getParameter("password");
+		
+		user.setUsername(username);
+		user.setPassword(password);
+		
+		try {
+			
+			boolean check=UserRegistrationDao.saveUser(user);
+			
+			if(check=true)
+			{
+			System.out.println("registered");
+			}
+			else
+			{
+            System.out.println("not registered");
+			}
+			
+			
+		} catch (ClassNotFoundException | SQLException | IOException e) {
+			
+			e.printStackTrace();
+		}
+	
+		
+		
+
+	
+    	
+    	
+	
+	
+	}
+
+}

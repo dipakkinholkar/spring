@@ -1,0 +1,42 @@
+package com.dipak.dao;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.dipak.beans.User;
+import com.dipak.connection.DBConnection;
+import com.dipak.util.PasswordUtil;
+
+public class UserRegistrationDao {
+	
+	private  static boolean FLAG=false;
+	
+	public static boolean saveUser(User user) throws SQLException, ClassNotFoundException, IOException
+	{
+		Connection  con=DBConnection.getConnection();
+		
+		PasswordUtil pass=new PasswordUtil();
+		
+		String salt=(String)pass.getSalt(5);
+	
+		String key=(String)pass.generateSecurePassword(user.getPassword() , pass.getSalt(10));
+		
+		
+		PreparedStatement st = con.prepareStatement("insert into userregister values(?,?,?,?,?)");
+  
+		st.setString(1,user.getAccType());
+		st.setString(2,user.getUserEmail());
+		st.setString(3,user.getUsername());
+		st.setString(4,user.getPassword());
+		st.setString(5,user. getGender());
+		st.setString(6, key);
+		st.setString(7, salt);
+		
+		FLAG=st.execute();
+		return FLAG;
+		
+	}
+	
+
+}

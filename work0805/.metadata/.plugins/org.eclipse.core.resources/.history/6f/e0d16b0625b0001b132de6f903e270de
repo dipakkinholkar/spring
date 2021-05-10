@@ -1,0 +1,9 @@
+package com.dipak.beans;
+
+public class UserLogin {
+	
+	String username;
+	String password;
+	
+
+}
