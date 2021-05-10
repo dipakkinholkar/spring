@@ -56,7 +56,7 @@ ApplicationContext ctx=new ClassPathXmlApplicationContext("com/dipak/xml/config.
 	    stud.setsClass("M.sc");
 	    
 	  Test t=new Test();
-	  
+//	  
 	   t.start();
 	    		
 	}
