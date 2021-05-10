@@ -28,6 +28,22 @@ public class StudentDao {
 		return jdbc.update(query);  
 	}
 	
+	// update student name , class by sid.
+	
+	public int updateStudent(Student stud)
+	{
+		
+		String query="update student set sname='"+ stud.getsName()+"', sclass='"+stud.getsClass()+"' where sid='"+stud.getsId()+"' ";	
+		
+		return jdbc.update(query);
+	}
+	
+	public int deleteStudent(Student stud)
+	{
+		String query="delete from student where sid='"+stud.getsId()+"'";
+		
+		return jdbc.update(query);
+	}
 	
 	
 	
